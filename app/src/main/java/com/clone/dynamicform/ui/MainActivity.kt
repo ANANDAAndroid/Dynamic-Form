@@ -37,7 +37,7 @@ class MainActivity : AppCompatActivity() {
         }
         binding.apply {
             viewPager.offscreenPageLimit = tabTitleList.size
-            viewPager.adapter = ViewPagerAdapter(tabTitleList, tabFragmentList, supportFragmentManager, lifecycle)
+            viewPager.adapter = ViewPagerAdapter(tabFragmentList, supportFragmentManager, lifecycle)
             TabLayoutMediator(tabLayout,viewPager) { tab, position ->
                 tab.text = tabTitleList[position]
             }.attach()
